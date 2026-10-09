@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
 <meta name="mrbd-web-app-capable" content="yes" />
 <meta name="application-name" content="Countdown" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#f4f1eb" media="(prefers-color-scheme: light)" />
@@ -41,6 +40,8 @@
       --gold-wash: #f2dfb5;
       --green: #3e6849;
       --green-wash: #d3e6d5;
+      --school: #315f7a;
+      --school-wash: #d6e6ed;
       --shadow: 0 14px 44px rgba(39, 34, 26, .08);
     }
 
@@ -61,6 +62,8 @@
         --gold-wash: #49391d;
         --green: #9bc5a4;
         --green-wash: #29402d;
+        --school: #9bc7df;
+        --school-wash: #263b46;
         --shadow: 0 16px 54px rgba(0, 0, 0, .28);
       }
     }
@@ -298,6 +301,7 @@
 
     .countdown-row[data-category="ai"] .date-tile { background: var(--teal-wash); color: var(--teal); }
     .countdown-row[data-category="offer"] .date-tile { background: var(--gold-wash); color: var(--gold); }
+    .countdown-row[data-category="school"] .date-tile { background: var(--school-wash); color: var(--school); }
     .countdown-row[data-urgent="true"] .date-tile { background: var(--accent-wash); color: var(--accent-ink); }
 
     .date-tile {
@@ -442,6 +446,7 @@
 
     <nav class="filters" aria-label="Countdown filters">
       <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-filter="school" aria-pressed="false">School</button>
       <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI &amp; Muse</button>
       <button class="filter" type="button" data-filter="offer" aria-pressed="false">Offers</button>
     </nav>
@@ -524,7 +529,11 @@
       var items = [
         { id: "muse", category: "ai", kind: "Muse quota", title: "Muse quota", date: "2026-10-06T17:13:00-04:00", exact: true, display: "Oct 6 at 5:13 PM", nudge: true },
         { id: "subscription", category: "other", kind: "Cancelled subscription", title: "ElevenReader ends", date: "2026-10-08T23:59:00-04:00", exact: false, display: "cancelled, service ends Oct 8", nudge: false },
+        { id: "school-hw7", category: "school", kind: "School deadline", title: "HW7", date: "2026-10-11T23:59:00-04:00", exact: false, display: "Due Oct 11 · end of day", nudge: false },
+        { id: "school-lab-quiz-5", category: "school", kind: "Lab", title: "Lab Quiz 5", date: "2026-10-12T23:59:00-04:00", exact: false, display: "Due Oct 12 · end of day", nudge: false },
         { id: "rx-esc", category: "other", kind: "CVS Pharmacy", title: "Pick up Rx ESC", date: "2026-10-12T23:59:00-04:00", exact: false, display: "Oct 12 · end of day", nudge: true },
+        { id: "school-biostats-exam-1", category: "school", kind: "Biostatistics", title: "Exam 1", date: "2026-10-14T23:59:00-04:00", exact: false, display: "Due Oct 14 · end of day", nudge: false },
+        { id: "school-pharm-topic", category: "school", kind: "Pharmacology", title: "Project topic approval", date: "2026-10-14T23:59:00-04:00", exact: false, display: "Due Oct 14 · end of day", nudge: false },
         { id: "ai-1", category: "ai", kind: "Full reset · weekly + 5-hour", title: "Codex reset", date: "2026-10-22T16:23:00-04:00", exact: true, display: "Oct 22 at 4:23 PM", nudge: true },
         { id: "ai-2", category: "ai", kind: "Full reset · weekly + 5-hour", title: "Codex reset", date: "2026-10-29T13:31:00-04:00", exact: true, display: "Oct 29 at 1:31 PM", nudge: true },
         { id: "prime", category: "offer", kind: "Amazon Prime", title: "Prime ends", date: "2026-10-30T23:59:59-04:00", exact: false, display: "Oct 30 · end of day", nudge: true },
