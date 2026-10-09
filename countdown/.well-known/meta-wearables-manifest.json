@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "name": "Countdown",
+  "appearance": {
+    "icon": {
+      "src": "../icon.svg"
+    },
+    "theme_color": "#1a1b18"
+  }
+}
