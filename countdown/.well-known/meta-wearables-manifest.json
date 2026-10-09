@@ -1,10 +1,24 @@
 {
   "version": 1,
   "name": "Countdown",
+  "description": "Subscription and quota countdown timers.",
   "appearance": {
+    "theme_color": "#1a1b18",
     "icon": {
-      "src": "../icon.svg"
+      "src": "icon.svg",
+      "type": "monochrome"
     },
-    "theme_color": "#1a1b18"
+    "icon_background": {
+      "colors": [
+        "#2e2f2a",
+        "#1a1b18",
+        "#0c0d0b"
+      ],
+      "stops": [
+        0,
+        0.5,
+        1
+      ]
+    }
   }
 }
